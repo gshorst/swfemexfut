@@ -1,0 +1,16 @@
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Height</th>
+      <th>Mass</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of people.results">
+      <td>{{ person.name }}</td>
+      <td>{{ person?.height }}</td>
+      <td>{{ person?.mass }}</td>
+    </tr>
+  </tbody>
+</table>
